@@ -1,0 +1,195 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: lightblue;
+  padding: 9px;
+  flex-wrap: wrap; /* Make navbar flexible */
+}
+
+nav input {
+  width: 250px;
+  text-decoration: none;
+  padding: 9px;
+  font-size: 18px;
+  border: none;
+}
+
+nav button {
+  width: 80px;
+  height: 38px;
+  background-color: blue;
+  border: none;
+  border-radius: 2px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Search Bar */
+.searchBar {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+/* Navbar links */
+nav ul {
+  display: flex;
+  gap: 11px;
+  flex-wrap: wrap; /* Make navbar links wrap in small screens */
+}
+
+/* Card Container */
+.cardContainer {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* Responsive grid */
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+/* Card */
+.card {
+  width: 100%;
+  max-width: 320px; /* Max width for larger screens */
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  border-radius: 3px;
+  margin-top: 21px;
+  border: 1px solid rgb(236, 236, 236);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.card .title {
+  font-weight: 600;
+  font-size: 18px;
+  margin-top: -7px;
+}
+
+.card .title:hover {
+  border-bottom: 1px solid black;
+  cursor: pointer;
+}
+
+.card .content {
+  padding: 9px;
+}
+
+.card button {
+  background-color: rgb(29, 162, 214);
+  border: none;
+  cursor: pointer;
+  width: 80px;
+  height: 28px;
+  color: white;
+  font-size: 13px;
+  border-radius: 2px;
+}
+
+/* Category Buttons */
+.categoryBtn {
+  display: flex;
+  justify-content: center;
+  gap: 11px;
+  flex-wrap: wrap; /* Wrap the category buttons in small screens */
+}
+
+.categoryBtn button {
+  width: 130px;
+  height: 33px;
+  background-color: rgb(255, 108, 108);
+  border: none;
+  outline: none;
+  font-size: 18px;
+  border-radius: 16px;
+  color: white;
+  cursor: pointer;
+  padding: 2px;
+}
+
+/* Headline */
+.head {
+  text-align: center;
+  font-weight: 600;
+  font-size: 26px;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  nav input {
+    width: 200px;
+    font-size: 16px;
+  }
+
+  nav button {
+    width: 80px;
+    height: 35px;
+  }
+
+  .card img {
+    height: 150px;
+  }
+
+  .card .title {
+    font-size: 16px;
+  }
+
+  .card button {
+    width: 70px;
+    height: 26px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  nav input {
+    width: 150px;
+    font-size: 14px;
+  }
+
+  nav button {
+    width: 50px;
+    height: 30px;
+  }
+
+  .card img {
+    height: 120px;
+  }
+
+  .card .title {
+    font-size: 14px;
+  }
+
+  .card button {
+    width: 60px;
+    height: 24px;
+    font-size: 11px;
+  }
+}
